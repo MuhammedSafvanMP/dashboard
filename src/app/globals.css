@@ -1,24 +1,32 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Define CSS Variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --border: 220 13% 91%; /* Example color */
+  --input: 220 13% 95%;
+  --ring: 220 13% 80%;
+  --background: 220 13% 99%;
+  --foreground: 220 13% 20%;
+  --primary: 220 100% 50%;
+  --primary-foreground: 220 100% 95%;
+  --secondary: 220 50% 40%;
+  --secondary-foreground: 220 50% 90%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 84% 95%;
+  --muted: 220 13% 80%;
+  --muted-foreground: 220 13% 40%;
+  --accent: 220 70% 50%;
+  --accent-foreground: 220 70% 95%;
+  --popover: 220 20% 95%;
+  --popover-foreground: 220 20% 30%;
+  --card: 220 13% 95%;
+  --card-foreground: 220 13% 10%;
+  --radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Ensure Border Classes Work */
+.border-border {
+  border-color: hsl(var(--border));
 }
